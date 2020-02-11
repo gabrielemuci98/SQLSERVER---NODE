@@ -27,7 +27,13 @@ app.use(cors());
 app.use(function(req, res, next) {
   next(createError(404));
 });
-
+app.get('/link', (req, res) => {
+  const person = people.profiles.find((p) => p.id === req.query.id);
+  res.render('link', {
+    title: `About ${person.firstname} ${person.lastname}`,
+    person,
+  });
+});
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
