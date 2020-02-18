@@ -1,5 +1,55 @@
-extends layout
-
 block content
   h1= title
   p Welcome to #{title}
+  ul
+    li
+    a(href="index") Nuova Unità
+    li
+    a(href="/") Lista Unità
+
+  form(method='POST' action='/users')
+    div  
+      label(for='Unit') Unit:
+      br
+      input(type='text', placeholder='Unit name' name='Unit')
+    div  
+      label(for='Cost') Cost:
+      br
+      input(type='text', placeholder='xy' name='Cost')
+    div  
+      label(for='Hit_Speed') Hit speed:
+      br
+      input(type='text', placeholder='xy sec' name='Hit_Speed')
+    div  
+      label(for='Speed') Speed:
+      br
+      input(type='text', placeholder='' name='Speed')
+    div  
+      label(for='Deploy_Time') Deploy Time:
+      br
+      input(type='text', placeholder='' name='Deploy_Time')
+    div  
+      label(for='Range') Range:
+      br
+      input(type='text', placeholder='' name='Range')
+    div  
+      label(for='Target') Target:
+      br
+      input(type='text', placeholder='' name='Target')
+    div  
+      label(for='Count') Count:
+      br
+      input(type='text', placeholder='' name='Count')
+    div  
+      label(for='Transport') Transport:
+      br
+      input(type='text', placeholder='' name='Transport')
+    div  
+      label(for='Type') Type:
+      br
+      input(type='text', placeholder='' name='Type')
+    div  
+      label(for='Rarity') Rarity:
+      br
+      input(type='text', placeholder='' name='Rarity')  
+    button(type='submit') Invia

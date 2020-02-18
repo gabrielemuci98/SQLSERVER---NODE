@@ -1,6 +1,13 @@
 block content
-  each arr in unit
+  h1= title
+  p Welcome to #{title}
+  ul
+    li
+    a(href="index") Nuova Unità
+    li
+    a(href="/") Lista Unità
+  each arr in unita
     h1 
-        a(href = `/unit/${arr.Unit}`) #{arr.Unit}
-            br
-            img(src = `/images/${arr.Unit}.png`)
+      a(href = `/unit/${arr.Unit}`) #{arr.Unit}
+      br
+      img(src = `/images/${arr.Unit}.png`)
